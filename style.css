@@ -1,0 +1,40 @@
+// #7B876D DarkSeaGreen
+// #989E8B LemonGrass
+// #DDB8A6 RoseOfSharon
+// #D49B7E DarlingClementine
+// #C67F43 ShadeOfOrange
+// #893F04 EpicureanOrange
+
+
+/* Global */
+/* Color */
+--color-white: #ffffff;
+--color-light-white: #eeeeee;
+--color-dark-white: #bdbdbd;
+--color-dark-sea-green: #7B876D;
+--color-lemon-grass: #989E8B;
+--color-rose-sharon: #DDB8A6;
+--color-darling-clementine: #D49B7E;
+--color-shade-orange: #C67F43;
+--color-epicurean-orange: #893F04;
+--color-black: #000000;
+--color-grey: #616161;
+--color-light-grey: #7c7979;
+--color-dark-grey: #4d4d4d;
+
+/* Font size */
+--font-large: 48px;
+--font-medium: 28px;
+--font-regular: 18px;
+--font-small: 16px;
+--font-micro: 14px;
+
+/* Font weight */
+--weight-bold: 700;
+--weight-semi-bold: 600;
+--weight-regular: 400;
+
+/* Universal tags */
+* {
+    box-sizing: border-box;
+}
