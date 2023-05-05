@@ -135,6 +135,15 @@ p {
     background-color: var(--color-lemon-grass);
 }
 
+.navbar__toggle-btn{
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 24px;
+    color: var(--color-white);
+    display: none;
+}
+
 /* Home */
 #home {
     background-color: var(--color-dark-sea-green);
@@ -473,3 +482,4 @@ p {
   transform: scale(1.1);
   color: var(--color-darling-clementine);
 }
+
