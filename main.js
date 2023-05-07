@@ -26,3 +26,21 @@ navbarMenu.addEventListener('click', (event) =>{
         scrollToPage.scrollIntoView({behavior:"smooth"});
     }
 })
+
+// Scrolling to Top Page
+// 1) showing Arrow when scrolling down
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+const pageUp = document.querySelector('.page-up');
+document.addEventListener('scroll', ()=>{
+    if(window.scrollY > homeHeight / 2) {
+        pageUp.classList.add('visible');
+    } else {
+        pageUp.classList.remove('visible');
+    }
+});
+
+// 2) Go to the top page when clicking 'arrow'
+pageUp.addEventListener('click', ()=>{
+    scrollToPage.scrollIntoView('#home', {behavior:'smooth'});
+});

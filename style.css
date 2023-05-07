@@ -493,6 +493,26 @@ p {
   color: var(--color-darling-clementine);
 }
 
+/* Arrow-Up */
+.page-up {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    background-color: var(--color-dark-sea-green);
+    color: var(--color-white);
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 300ms ease-in;
+}
+.page-up.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
     .navbar__toggle-btn{
