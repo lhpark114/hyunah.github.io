@@ -22,10 +22,17 @@ navbarMenu.addEventListener('click', (event) =>{
     if (scroll == null) {
         return;        // when 'undefined', just return
     } else {
-        const scrollToPage = document.querySelector(scroll);
-        scrollToPage.scrollIntoView({behavior:"smooth"});
+        scrollIntoView(scroll)
     }
 })
+
+// 'Contact Me' : Click and to the Contact section
+const contactMeBtn = document.querySelector('.home__contact');
+contactMeBtn.addEventListener('click', () => {
+    scrollIntoView('#contact');
+});
+
+
 
 // Scrolling to Top Page
 // 1) showing Arrow when scrolling down
@@ -42,5 +49,10 @@ document.addEventListener('scroll', ()=>{
 
 // 2) Go to the top page when clicking 'arrow'
 pageUp.addEventListener('click', ()=>{
-    scrollToPage.scrollIntoView('#home', {behavior:'smooth'});
+    scrollIntoView('#home');
 });
+
+function scrollIntoView(selector) {
+    const scrollToPage = document.querySelector(selector);
+    scrollToPage.scrollIntoView({behavior:"smooth"});
+}
