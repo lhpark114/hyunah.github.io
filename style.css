@@ -101,16 +101,17 @@ p {
 /* Navbar */
 #navbar {
     position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: transparent;
     align-items: center;
-    padding: 16px;
+    background-color: transparent;
     transition: all var(--animation-duration) ease-in-out;
+    z-index: 1;
 }
 
 #navbar.navbar--dark {
-    background-color: var(--color-lemon-grass);
+    background-color: var(--color-dark-sea-green);
     padding: 8px;
 }
 

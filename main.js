@@ -13,3 +13,16 @@ window.addEventListener('scroll', function() {
          // remove padding top from body
       } 
   });
+
+// Handle scrolling when tapping on the navbar menu
+const navbarMenu = document.querySelector('.navbar__menu');
+navbarMenu.addEventListener('click', (event) =>{
+    const target = event.target;
+    const scroll = target.dataset.scroll;
+    if (scroll == null) {
+        return;        // when 'undefined', just return
+    } else {
+        const scrollToPage = document.querySelector(scroll);
+        scrollToPage.scrollIntoView({behavior:"smooth"});
+    }
+})
