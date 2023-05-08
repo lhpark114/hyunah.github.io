@@ -61,3 +61,25 @@ function scrollIntoView(selector) {
 document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeHeight;
 });
+
+// Filtering
+const workCategories = document.querySelector('.work__categories');
+const workProjects = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workCategories.addEventListener('click', (e) => {
+    e.preventDefault()
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+        if (filter == null) {
+            return;        // when 'undefined', just return
+        } else {
+            projects.forEach((project) => {
+                 if(filter === '*' || filter === project.dataset.type) {
+                    project.classList.remove('invisible');
+                 } else {
+                    project.classList.add('invisible');
+                 }
+            })    
+    }
+});
+    
