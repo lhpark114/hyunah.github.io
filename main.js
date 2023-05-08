@@ -72,7 +72,15 @@ workCategories.addEventListener('click', (e) => {
     const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
         if (filter == null) {
             return;        // when 'undefined', just return
-        } else {
+        } 
+        
+            // Remove Selection from the previous item and select the next one
+            const active = document.querySelector('.category__btn.selected');
+            active.classList.remove('selected');
+            const target = 
+                e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+            target.classList.add('selected');
+
             workProjects.classList.add('animation');
                 
             setTimeout(() => {
@@ -82,11 +90,8 @@ workCategories.addEventListener('click', (e) => {
                  } else {
                     project.classList.add('invisible');
                  }
-            })
-            
-                workProjects.classList.remove('animation');
-            },300)
-            
-    }
-});
+            });
+                 workProjects.classList.remove('animation');
+        },300)
+    });
     
