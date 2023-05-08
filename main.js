@@ -56,3 +56,8 @@ function scrollIntoView(selector) {
     const scrollToPage = document.querySelector(selector);
     scrollToPage.scrollIntoView({behavior:"smooth"});
 }
+
+// Home Fade effects
+document.addEventListener('scroll', () => {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
