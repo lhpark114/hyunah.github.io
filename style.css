@@ -420,16 +420,16 @@ p {
     transform: translateY(0px);
 }
 .project__description h3 {
-    color: var(--color-white);
+    color: var(--color-darling-clementine);
 }
 .project__description h3:after {
     content: '';
     display: block;
     position: relative;
     left: 50%;
-    width: 25px;
+    width: 50px;
     height: 2px;
-    margin-left: -12px;
+    transform: translateX(-50%);
     margin-top: 8px;
     background-color: var(--color-dark-white);
 }
@@ -524,16 +524,25 @@ p {
 @media screen and (max-width: 768px) {
     .navbar__toggle-btn{
         display: block;
+        z-index:1;
     }
     #navbar {
         flex-direction: column;
         align-items: flex-start;
+        background-color: var(--color-dark-sea-green);
+    }
+
+    #navbar.navbar--dark {
+        padding: 16px;
     }
     .navbar__menu {
         flex-direction: column;
         text-align: center;
         width: 100%;
         display: none;
+    }
+    .navbar__menu.open {
+        display: block;
     }
     .about__majors {
         flex-direction: column;

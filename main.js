@@ -14,6 +14,7 @@ window.addEventListener('scroll', function() {
       } 
   });
 
+
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) =>{
@@ -22,8 +23,16 @@ navbarMenu.addEventListener('click', (event) =>{
     if (scroll == null) {
         return;        // when 'undefined', just return
     } else {
+        navbarMenu.classList.remove('open');
         scrollIntoView(scroll)
     }
+})
+
+
+// Active Toggle Button
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
 })
 
 // 'Contact Me' : Click and to the Contact section
