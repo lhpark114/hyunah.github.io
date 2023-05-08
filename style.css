@@ -70,6 +70,7 @@ button {
     background-color: transparent;
     outline: none;
     cursor: pointer;
+    padding: 0;
 }
 /* Typography */
 h1 {
@@ -184,6 +185,10 @@ p {
     padding: 8px 12px;
     border: 1px solid var(--color-light-white);
     border-radius; var(--size-border-radius);
+}
+
+.home__contact:hover {
+    background-color: var(--color-light-white);
 }
 
 /* Section common */
@@ -343,6 +348,7 @@ p {
     font-size: var(--font-regular);
     padding: 8px 48px;
     color: var(--color-lemon-grass);
+    position: relative;
 }
 .category__btn.selected,
 .category__btn:hover {
@@ -361,9 +367,9 @@ p {
     line-height: 24px;
     border-radius: 50%;
     display: inline-block;
-    position: relative;
+    position: absolute;
     top: -20px;
-    left: 4px;
+    right: 16px;
     opacity: 0;
     transition: all var(--animation-duration) ease-in;
 }
@@ -522,9 +528,20 @@ p {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+    :root {
+        /* Font size */
+    --font-large: 2rem;
+    --font-medium: 1.125rem;
+    --font-regular: 1rem;
+    --font-small: 0.875rem;
+    --font-micro: 0.75rem;
+    }
+
     .navbar__toggle-btn{
         display: block;
-        z-index:1;
+        top: 16px;
+        right: 16px;
+        font-size: var(--font-medium);
     }
     #navbar {
         flex-direction: column;
@@ -533,7 +550,7 @@ p {
     }
 
     #navbar.navbar--dark {
-        padding: 16px;
+        padding: 0;
     }
     .navbar__menu {
         flex-direction: column;
@@ -542,22 +559,59 @@ p {
         display: none;
     }
     .navbar__menu.open {
-        display: block;
+        padding: 16px;
+    }
+    .section {
+        padding: 16px;
+        padding: 40px;
     }
     .about__majors {
         flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    .about__school {
+        flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 0px;
     }
     .major {
-        margin-bottom: 38px;
+        margin-bottom: 30px;
     }
     .skillset {
         flex-direction: column;
     }
+    .category__btn {
+        margin: 4px 0;
+        width: 100%;
+    }
     .project {
         flex-grow: 1;
     }
+    .testimonial {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .testimonial__avatar {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
+    }
+    .testimonial__avatar:nth-child(even),
+    .testimonial__avatar:nth-child(odd) {
+        margin: 0;
+        margin-bottom: 8px;
+    }
+    .testimonial__speech-bubble {
+        order: 1;
+    }
+    .page-up {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
     }
 }
