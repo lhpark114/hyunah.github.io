@@ -73,13 +73,20 @@ workCategories.addEventListener('click', (e) => {
         if (filter == null) {
             return;        // when 'undefined', just return
         } else {
-            projects.forEach((project) => {
+            workProjects.classList.add('animation');
+                
+            setTimeout(() => {
+                projects.forEach((project) => {
                  if(filter === '*' || filter === project.dataset.type) {
                     project.classList.remove('invisible');
                  } else {
                     project.classList.add('invisible');
                  }
-            })    
+            })
+            
+                workProjects.classList.remove('animation');
+            },300)
+            
     }
 });
     

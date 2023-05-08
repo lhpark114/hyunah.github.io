@@ -373,9 +373,14 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-   
+    opacity: 1;
+   transition: all var(--animation-duration) ease-out;
 }
+.work__projects.animation {
+    opacity: 0;
+    transform: scale(0.95) translateY(40px);
 
+}
 
 .project {
     position: relative;
