@@ -144,6 +144,11 @@ p {
     background-color: var(--color-lemon-grass);
 }
 
+.navbar__menu__item.menuActive {
+    border: 1px solid var(--color-light-white);
+    background-color: var(--color-lemon-grass);
+}
+
 .navbar__toggle-btn{
     position: absolute;
     top: 24px;
