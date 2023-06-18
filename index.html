@@ -36,15 +36,15 @@
   </head>
 
   <body>
-    <button class="page-up">    
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
+    <!-- Header -->
+    <header>
     <!-- Navbar -->
     <nav id="navbar">
         <div class="navbar__logo">
             <img class="navbar__logo__img" src="./imgs/favicon.png" alt="logo" />
-            <a href="#">Strawberry</a>
+            <h1><a href="#">Strawberry</a></h1>
         </div>
+        <nav>
         <ul class="navbar__menu">
             <li class="navbar__menu__item active" data-scroll="#home">Home</li>
             <li class="navbar__menu__item" data-scroll="#about">About</li>
@@ -53,11 +53,27 @@
             <li class="navbar__menu__item" data-scroll="#testimonials">Testimonial</li>
             <li class="navbar__menu__item" data-scroll="#contact">Contact</li>
         </ul>
+
+        <!-- <ul class="navbar__menu">
+            <li <a href="#home">Home</a></li>
+            <li <a href="#about">About</a><</li>
+            <li <a href="#skills">Skills</a><</li>
+            <li <a href="#work">My work</a><</li>
+            <li <a href="#testimonials">Testimonial</a><</li>
+            <li <a href="#contact">Contact</a><</li>
+        </ul> -->
+        </nav>
+        
         <!-- Toggle Button -->
         <button class="navbar__toggle-btn">
             <i class="fa-solid fa-bars"></i>
         </button>
     </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+
     <!-- Home -->
     <Section id="home">
         <div class="home__container">
@@ -65,11 +81,24 @@
             src="./imgs/Profile.jpg"
             alt="Hyun-Ah's profile photo"
             class="home__avatar"/>
-            <h1 class="home__title">Hello, <br/>I'm YumYum</h1>
-            <h2 class="home__description">Fashion to Front End Developer</h2>
-            <button class="home__contact">CONTACT ME</button>
+            <h2 class="home__title">Hello, <br/>I&#39;m YumYum</h2>
+            <p class="home__description">Fashion to Front End Developer</p>
+            <a href=#contact>CONTACT ME</a>
         </div>
     </Section>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <!-- Arrow Up -->
+    <aside>
+        <button class="page-up">    
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </aside>
+
+
     <!-- About Me -->
     <section id="about" class="section section__container">
         <h1>About me</h1>
