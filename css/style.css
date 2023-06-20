@@ -1,6 +1,13 @@
 
 /* Global */
 :root {
+    /* App Colors */
+    --color-primary: var(--color-dark-sea-green);
+    --color-primary-variant: var( --color-lemon-grass);
+    --color-accent: var(--color-shade-orange);
+    --color-accent-variant: var(--color-grey);
+    --color-text: var(--color-dark-white);
+    
     /* Color */
     --color-white: #ffffff;
     --color-light-white: #eeeeee;
@@ -52,9 +59,12 @@ body {
     margin: 0;
     cursor: default;
 }
+h1, h2, h3, p, ul {
+    margin: 0;
+}
 a{
     text-decoration: none;
-    color: var(--color-light-white);
+    color: var(--color-text);
 }
 ul {
     list-style: none;
@@ -66,11 +76,14 @@ li {
 }
 
 button {
-    border: none;
+    border: 0;
     background-color: transparent;
-    outline: none;
+    outline: 0;
     cursor: pointer;
     padding: 0;
+}
+button: focus {
+    outline: 1px solid var(--color-accent);
 }
 /* Typography */
 h1 {
