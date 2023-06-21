@@ -300,14 +300,12 @@ p {
 .major__title {
     font-size: var(--font-regular);
     font-weight: var(--weight-bold);
-    color: var(--color-lemon-grass);
     padding: 16px 0;
     margin-bottom: 1rem;
 }
 .major__description {
     font-size: var(--font-small);
     font-weight: var(--weight-regular);
-    color: var(--color-lemon-grass);
 }
 
 .about__jobs {
@@ -359,25 +357,39 @@ p {
 
 }
 .skillset {
-    display: flex;
-    margin: 20px 0;
+    background: var(--color-primary-variant);
+    color: var(--color-light-white);
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    margin: 2rem 3rem;
+    border-radius: 8px;
+    overflow: hidden;
     font-size: var(--font-small);
     font-weight: var(--weight-regular);
-    color: var(--color-light-white);
+    
 }
 
-.skillset__left{
-    flex-basis: 60%;
-    padding: 20px 40px;
+.skillset__coding {
+    grid-row: span 2;
+    padding: 1rem;
+    background: var(--color-primary);
 }
-.skillset_right {
-    flex-basis: 40%;
+
+.skillset__tools {
+    padding: 1rem;
+}
+
+.skillset__etc {
+    padding: 1rem;
+    background: var(--color-primary);
+    filter: brightness(150%);
 }
 
 .skillset__title {
     font-size: var(--font-small);
     font-weight: var(--weight-bold);
     color: var(--color-light-white);
+    margin: 1rem 0;
 }
 .skill_description {
     display: flex;
