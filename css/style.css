@@ -253,6 +253,15 @@ p {
     margin: auto;
 }
 
+.title {
+    font-size: var(--font-medium);
+    margin: 1rem 0;    
+}
+
+.description {
+    font-size: var(--font-regular);
+    margin: 0.5rem 0;
+}
 /* About me */
 
 .about__majors {
