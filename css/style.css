@@ -532,41 +532,42 @@ p {
 
 /* Testimonials */
 #testimonials {
-  background-color: var(--color-light-grey);
-}
-.testimonials {
-  margin: 40px;
+  margin: 3rem;
 }
 
 .testimonial {
   display: flex;
-  margin: 32px 0;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
 }
 
 .testimonial__avatar {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  border-radius: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.testimonial__avatar:nth-child(odd) {
-  margin-right: 40px;
+.testimonial:nth-child(even) .testimonial__avatar {
+    order: 1;
 }
-.testimonial__avatar:nth-child(even) {
-  margin-left: 40px;
-}
-.testimonial__speech-bubble {
-  padding: 18px;
+
+.testimonial__bubble {
+  padding: 1rem;
   background-color: var(--color-dark-sea-green);
   border-radius: var(--size-border-radius); 
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .testimonial__speech-bubble p {
   color: var(--color-light-grey);
 }
 
-.testimonial__speech-bubble a {
+.testimonial__bubble__name {
   color: var(--color-darling-clementine);
+  font-weight: var(--weight-bold);
+  filter: brightness(70%);
 }
 
 /* Contact */
