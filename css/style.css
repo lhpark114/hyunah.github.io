@@ -463,11 +463,11 @@ p {
 }
 
 .work__projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    opacity: 1;
-   transition: all var(--animation-duration) ease-out;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1,1fr);
+    gap: 1rem;
+    transition: all var(--animation-duration) ease-out;
 }
 .work__projects.animation {
     opacity: 0;
@@ -475,7 +475,7 @@ p {
 
 }
 
-.project {
+.work__project {
     position: relative;
     display: flex;
     justify-content: center;
@@ -483,6 +483,8 @@ p {
     width: 280px;
     height: 250px;
     margin: 2px;
+    border-radius: 8px;
+    overflow: hidden;
     background-color: var(--color-light-white);
 }
 .project.invisible {
@@ -496,35 +498,35 @@ p {
 
 .project__description {
     position: absolute;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    color: var(--color-light-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(-10px);
     transition: all var(--animation-duration) ease-in;
 }
 
-.project:hover .project__description {
+.project__description:hover {
     opacity: 0.8;
     transform: translateY(0px);
 }
-.project__description h3 {
-    color: var(--color-darling-clementine);
-}
-.project__description h3:after {
+
+.project__title:after {
     content: '';
     display: block;
     position: relative;
     left: 50%;
+    transform: translateX(-50%);
+    margin: 0.5rem 0;
     width: 50px;
     height: 2px;
-    transform: translateX(-50%);
-    margin-top: 8px;
     background-color: var(--color-dark-white);
 }
 
