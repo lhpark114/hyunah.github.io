@@ -189,10 +189,12 @@ p {
 }
 
 .header__menu__item {
+    display: block;
     padding: 8px 16px;
     cursor: pointer;
     border-radius; var(--size-border-radius);
     border: 1px solid transparent;
+    border-bottom: 1px solid transparent;
 }
 
 
@@ -626,7 +628,7 @@ p {
     }
 
     .section {
-        padding: 3rem 2rem;
+        padding: 4rem 2rem;
     }
 
     .title {

@@ -16,15 +16,15 @@ document.addEventListener('scroll', function() {
 
 
 // Handle scrolling when tapping on the header menu
-const headerMenu = document.querySelector('.header__menu');
-headerMenu.addEventListener('click', (event) =>{
+const navbarMenu = document.querySelector('.header__menu');
+navbarMenu.addEventListener('click', (event) =>{
     const target = event.target;
     const scroll = target.dataset.scroll;
   //const menuActive = document.querySelector('.navbar__menu');
     if (scroll == null) {
         return;        // when 'undefined', just return
     } else {
-        headerMenu.classList.remove('open');
+        navbarMenu.classList.remove('open');
         scrollIntoView(scroll);
     }
 })
@@ -35,6 +35,7 @@ const navbarToggleBtn = document.querySelector('.header__toggle');
 navbarToggleBtn.addEventListener('click', () => {
     navbarMenu.classList.toggle('open');
 })
+
 
 // 'Contact Me' : Click and to the Contact section
 const contactMeBtn = document.querySelector('.home__contact');
