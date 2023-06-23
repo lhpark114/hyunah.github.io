@@ -1,30 +1,30 @@
 'use strict';
 
-// Make navbar transparent when it is on the top
-const navbar = document.querySelector('#navbar');
-const navbarHeight = navbar.getBoundingClientRect().height;
+// Make header transparent when it is on the top
+const header = document.querySelector('.header');
+const headerHeight = header.offsetHeight;
 
 document.addEventListener('scroll', function() {
-      if (window.scrollY > navbarHeight) {
-        navbar.classList.add('header--dark');
-        // add padding top to show content behind navbar
+      if (window.scrollY > headerHeight) {
+        header.classList.add('header--dark');
+        // add padding top to show content behind header
       } else {
-        navbar.classList.remove('header--dark');
+        header.classList.remove('header--dark');
          // remove padding top from body
       } 
   });
 
 
-// Handle scrolling when tapping on the navbar menu
-const navbarMenu = document.querySelector('.navbar__menu');
-navbarMenu.addEventListener('click', (event) =>{
+// Handle scrolling when tapping on the header menu
+const headerMenu = document.querySelector('.header__menu');
+headerMenu.addEventListener('click', (event) =>{
     const target = event.target;
     const scroll = target.dataset.scroll;
   //const menuActive = document.querySelector('.navbar__menu');
     if (scroll == null) {
         return;        // when 'undefined', just return
     } else {
-        navbarMenu.classList.remove('open');
+        headerMenu.classList.remove('open');
         scrollIntoView(scroll);
     }
 })
@@ -47,13 +47,13 @@ contactMeBtn.addEventListener('click', () => {
 // Scrolling to Top Page
 // 1) showing Arrow when scrolling down
 const home = document.querySelector('.home__container');
-const homeHeight = home.getBoundingClientRect().height;
+const homeHeight = home.offsetHeight;
 const pageUp = document.querySelector('.page-up');
 document.addEventListener('scroll', ()=>{
     if(window.scrollY > homeHeight / 2) {
-        pageUp.classList.add('visible');
+        pageUp.style.opacity = 1;
     } else {
-        pageUp.classList.remove('visible');
+        pageUp.style.opacity = 0;
     }
 });
 
