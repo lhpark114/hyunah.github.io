@@ -4,12 +4,12 @@
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 
-window.addEventListener('scroll', function() {
+document.addEventListener('scroll', function() {
       if (window.scrollY > navbarHeight) {
-        navbar.classList.add('navbar--dark');
+        navbar.classList.add('header--dark');
         // add padding top to show content behind navbar
       } else {
-        navbar.classList.remove('navbar--dark');
+        navbar.classList.remove('header--dark');
          // remove padding top from body
       } 
   });
