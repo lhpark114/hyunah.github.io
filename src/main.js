@@ -70,53 +70,7 @@ document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
-// Filtering
-const workCategories = document.querySelector('.work__categories');
-const workProjects = document.querySelector('.work__projects');
-const projects = document.querySelectorAll('.project');
 
-workCategories.addEventListener('click', (e) => {
-    e.preventDefault()
-    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-        if (filter == null) {
-            return;        // when 'undefined', just return
-        } 
-        
-            // Remove Selection from the previous item and select the next one
-            const active = document.querySelector('.category__btn.selected');
-            active.classList.remove('selected');
-            const target = 
-                e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
-            target.classList.add('selected');
-
-            workProjects.classList.add('animation');
-                
-            setTimeout(() => {
-                projects.forEach((project) => {
-                 if(filter === '*' || filter === project.dataset.type) {
-                    project.classList.remove('invisible');
-                 } else {
-                    project.classList.add('invisible');
-                 }
-            });
-                 workProjects.classList.remove('animation');
-        },300)
-    });
-
-
-const sectionIds = [
-  '#home', '#about', '#skills', '#work', '#testimonials', '#contact',
-];
-const sections = sectionIds.map(id => document.querySelector(id));
-const navItems = sectionIds.map(id => document.querySelector(`[data-scroll="${id}"`));
-
-let selectedNavIndex = 0;
-let selectedNavItem = navItems[0];
-function selectedNavItem(selected) {
-  selectedNavItem.classList.remove('active');
-  selectedNavItem = selected;
-  selectedNavItem.classList.add('active');
-}
 
 function scrollIntoView(selector) {
     const scrollToPage = document.querySelector(selector);
