@@ -8,6 +8,9 @@
     --color-accent-variant: var(--color-grey);
     --color-text: var(--color-dark-white);
     
+    /* Background */
+    --home-bg-gradient: linear-gradient(130deg, rgba(123,135,109,1) 0%, rgba(152,158,139,1) 100%);
+    
     /* Color */
     --color-white: #ffffff;
     --color-light-white: #eeeeee;
@@ -224,6 +227,7 @@ p {
 #home {
     position: relative;
     background-color: var(--color-primary);
+    background: var(--home-bg-gradient);
     padding: 5rem 1rem;
     padding-top: 7rem;
     text-align: center;
