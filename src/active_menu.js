@@ -11,11 +11,11 @@ const options = {
     threshold: [0, 0.98],
 };
 const observer = new IntersectionObserver(observerCallback, options);
-sections.forEach(section => observer.observe(section));
+sections.forEach((section) => observer.observe(section));
 
 function observerCallback(entries) {
     let selectLastOne;
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
         const index = sectionIds.indexOf(`#${entry.target.id}`);
         visibleSections[index] = entry.isIntersecting;
         selectLastOne = 
@@ -25,10 +25,9 @@ function observerCallback(entries) {
     });
 
     const navIndex = selectLastOne 
-    ? sectionIds.length - 1 
-    : findFirstIntersecting(visibleSections);
+        ? sectionIds.length - 1 
+        : findFirstIntersecting(visibleSections);
     selectNavItem(navIndex);
-
 }
 
 
