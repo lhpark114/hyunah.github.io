@@ -7,12 +7,12 @@ const workProjects = document.querySelector('.projects');
 
 workCategories.addEventListener('click', (e) => {
     e.preventDefault()
-    const filter = e.target.dataset.category;
+    const filter = e.target.dataset.filter;
         if (filter == null) {
             return;        // when 'undefined', just return
         } 
-        handleActiveSelection(e.target)
-        filterProjects(filter);    
+    handleActiveSelection(e.target)
+    filterProjects(filter);    
 });
 
 function handleActiveSelection(target) {
@@ -23,15 +23,15 @@ function handleActiveSelection(target) {
 }
 
 function filterProjects(filter) {
-        projects.forEach((project) => {
-            if(filter === '*' || filter === project.dataset.type) {
-                project.style.display = 'block';
-            } else {
-                project.style.display = 'none';
-            }
-        });
-        workProjects.classList.add('animation');   
-        setTimeout(() => {
-            workProjects.classList.remove('animation');
-        }, 300);
+    projects.forEach((project) => {
+        if(filter === '*' || filter === project.dataset.type) {
+            project.style.display = 'block';
+        } else {
+            project.style.display = 'none';
+        }
+    });
+    workProjects.classList.add('animation');   
+    setTimeout(() => {
+        workProjects.classList.remove('animation');
+    }, 300);
 }

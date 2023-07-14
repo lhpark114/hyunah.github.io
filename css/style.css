@@ -300,6 +300,10 @@ button: focus {
     text-align: start;
 }
 
+.jobs {
+  text-align: start;
+}
+
 .job{
     display: flex;
     align-items: center;
@@ -430,7 +434,7 @@ button: focus {
 
 .categories {
     display: flex;
-    justify-contact: center;
+    justify-content: center;
     margin: 2.5rem;
     gap: 1rem;
 }
