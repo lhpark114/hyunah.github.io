@@ -127,7 +127,7 @@ button: focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem;
     z-index: 1;
     transition: all 300ms ease;
 }
@@ -139,11 +139,11 @@ button: focus {
 .header__logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
 }
 .header__logo__img{
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
 }
 .header__logo__title {
     font-size: 1.8rem;
@@ -152,8 +152,8 @@ button: focus {
 .header__toggle{
     display: none;
     position: absolute;
-    top: 1.3rem;
-    right: 1rem;
+    top: 1.2rem;
+    right: 1.5rem;
     font-size: 1.5rem;
     color: var(--color-white);
 }
@@ -166,15 +166,12 @@ button: focus {
 .header__menu__item {
     display: block;
     padding: 8px 16px;
-    border-radius; var(--size-border-radius);
     border-bottom: 1px solid transparent;
 }
 
 
 .header__menu__item:hover {
     border-bottom: 1px solid var(--color-light-white);
-    border: 1px solid var(--color-light-white);
-    background-color: var(--color-lemon-grass);
 }
 
 .header__menu__item.active {
@@ -359,7 +356,7 @@ button: focus {
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-    background-color: var(--color-dark-sea-green);
+    background-color: var(--color-darling-clementine);
     mask: var(--divider-multi-wave);
     -webkit-mask: var(--divider-multi-wave);
 }
@@ -427,7 +424,7 @@ button: focus {
 
 /* Work */
 #work {
-  background-color: var(--color-primary);
+  background-color: var(--color-darling-clementine);
   color: var(--color-text);
 }
 
@@ -609,7 +606,7 @@ button: focus {
 }
 .contact__link:hover i{
   transform: scale(1.1);
-  color: var(--color-darling-clementine);
+  color: var(--color-primary);
 }
 
 /* Arrow-Up */
@@ -658,6 +655,7 @@ button: focus {
     .header__toggle{
         display: block;
         font-size: var(--font-medium);
+        cursor: pointer;
     }
     .header__menu {
         display: none;
