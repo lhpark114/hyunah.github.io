@@ -476,7 +476,7 @@ button: focus {
     gap: 1rem;
     transition: all var(--animation-duration) ease-out;
 }
-.projects.animation {
+.projects.anim-out {
     opacity: 0;
     transform: scale(0.95) translateY(20px);
 }

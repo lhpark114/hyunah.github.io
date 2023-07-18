@@ -3,15 +3,14 @@
 // Filtering
 const workCategories = document.querySelector('.categories');
 const projects = document.querySelectorAll('.project');
-const workProjects = document.querySelector('.projects');
+const projectContainer = document.querySelector('.projects');
 
-workCategories.addEventListener('click', (e) => {
-    e.preventDefault()
-    const filter = e.target.dataset.filter;
+workCategories.addEventListener('click', (event) => {
+    const filter = event.target.dataset.category;
         if (filter == null) {
             return;        // when 'undefined', just return
         } 
-    handleActiveSelection(e.target)
+    handleActiveSelection(event.target)
     filterProjects(filter);    
 });
 
@@ -30,8 +29,8 @@ function filterProjects(filter) {
             project.style.display = 'none';
         }
     });
-    workProjects.classList.add('animation');   
+    projectContainer.classList.add('anim-out');   
     setTimeout(() => {
-        workProjects.classList.remove('animation');
+        projectContainer.classList.remove('anim-out');
     }, 300);
 }
