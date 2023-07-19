@@ -6,6 +6,7 @@ const projects = document.querySelectorAll('.project');
 const projectContainer = document.querySelector('.projects');
 
 workCategories.addEventListener('click', (event) => {
+    console.log(event);
     const filter = event.target.dataset.category;
         if (filter == null) {
             return;        // when 'undefined', just return

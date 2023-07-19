@@ -211,7 +211,6 @@ button: focus {
 
 .home__container {
     position: relative;
-    display: flex;
     align-items: center;
     padding-top: 3rem;
 }
@@ -258,6 +257,7 @@ button: focus {
 
 
 /* About me */
+
 .about__majors {
     display: flex;
     justify-content: space-between;
@@ -294,6 +294,7 @@ button: focus {
 
 .about__jobs {
     text-align: start;
+    align-items: center;
 }
 
 .jobs {
