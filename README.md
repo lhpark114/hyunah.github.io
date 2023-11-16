@@ -1,2 +1,2 @@
-# Portfolio
- HyunAh's Portfolio - js
+# Resume
+ HyunAh's Resume - js
